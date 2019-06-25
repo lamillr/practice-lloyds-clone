@@ -1,0 +1,402 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 16px is default font size and we want a measurement system of 10px
+  10px/16px = 62.5%  
+  1 rem =10px
+  */
+}
+
+*, *:before,*:after {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+body {
+background-color: #f5f5f5;
+font-family: 'Lato', sans-serif;
+}
+
+.container{
+ margin: 0 auto;
+ width:60%;
+}
+
+/* main navigation-top */
+
+nav ul {
+  background-color: #f5f5f5;
+  color: black;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ul {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+nav ul li a {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav li:not(:first-child):not(:last-child):after{
+  content: " | ";
+  padding:1rem;
+}
+
+li .logo {
+  margin-right: 2rem;
+  margin-bottom: 0;
+}
+
+.logo {
+ display:inline-block;
+ width:10rem;
+ height:100%;
+ padding: 0;
+ margin: 0;
+}
+
+.nav-a:hover {
+  text-decoration: underline;
+}
+
+input[type=search] {
+  font-size: 1.7rem;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid;
+  background-color: lightgray;
+  background-image:url("assets/baseline_search_black_18dp.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  width:8rem;
+  text-align:center;
+  padding: .5rem .5rem;
+}
+
+/* news and risk tab navigation */
+.tab-nav {
+  display: flex;
+  background-color: #e0e0e6;
+  margin-top: 2rem;
+}
+
+#risk {
+  display: none;
+  margin-top:2rem;
+}
+
+#tabs:hover #risk {
+  display: block;
+}
+
+.tab {
+  border-top: .1rem solid #282f54;
+  border-right: .1rem solid white;
+  background-color: #e0e0e6;
+  cursor: pointer;
+  list-style: none;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  padding: 1rem 1rem;
+  color: #282f54;
+}
+
+.blue {
+  background-color:#282f54;
+  color: white;
+}
+
+.tab:hover {
+  text-decoration: underline;
+  background-color: lightgray;
+}
+
+.tab:active {
+  background-color: lightgray;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+#tabs {
+  margin-top:2rem;
+}
+
+/* tab content */
+
+.links-container {
+ display: grid;
+ height: 20rem;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr;
+ margin-top: 1.5rem;
+ grid-auto-flow: column;
+}
+
+hr {
+  border: 0;
+}
+
+.tab-li {
+  list-style: none;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tab-li a{
+  text-decoration: none;
+  color:black;
+  padding: 2rem 2rem 2rem 2rem
+}
+
+.tab-li a:hover{
+  text-decoration: underline;
+}
+
+/* new section = large taking control heading */
+
+.control {
+  background: #DCDCDC;
+  height: 20rem;
+}
+
+.breadcrumb {
+  display: flex;
+  border: 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.breadcrumb li {
+  list-style: none;
+  margin-top:2rem;
+  color: gray;
+  font-size:1.2rem;
+}
+
+.chevron {
+  margin-top: 2rem;
+  color: gray;
+}
+
+.control-content {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.taking-control {
+  margin-top:3rem;
+  font-size:5rem;
+}
+
+.share  {
+  color: #0047ab;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.ai {
+  margin-top:2rem;
+  font-size: 1.4rem;
+}
+
+.btn-share {
+  color: #0047ab;
+  border: none;
+  padding-left: 1rem;
+}
+
+/* new section = text and grid of cards */
+
+.automated {
+  font-size:1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.taking {
+  margin-top:2rem;
+}
+
+.cards {
+  width:60%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 4rem 10rem 8rem 8rem 4rem 10rem 8rem 8rem;
+}
+
+.h3-ai {
+  grid-row: 1/1;
+  grid-column: 2/2;
+  font-size:1.8rem;
+}
+
+.artificial {
+  grid-row: 2/2;
+  grid-column: 2/2;
+  font-size:1.7rem;
+}
+
+.img {
+  margin: 0 2rem 0;
+  grid-column: 1 /1 ;
+  grid-row: 1 / 4;
+}
+
+.brain {
+  width: 18rem;
+  height: 25rem;
+}
+
+.download {
+  background-color: #0047ab;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: white;
+  height:5rem;
+  width:8rem;
+  border: 0;
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+}
+
+.h3-robots{
+  font-size: 1.8rem;
+  grid-column: 2/2;
+  grid-row: 5/5;
+}
+
+.img-robots {
+  margin: 0 2rem 0;
+  grid-column: 1 /1 ;
+  grid-row: 5/8;
+}
+
+.robots{
+  width: 18rem;
+  height: 25rem;
+  grid-column: 1 /1 ;
+  grid-row: 6/6;
+}
+
+.robot-risk {
+  grid-column: 2/2;
+  grid-row: 6 /6;
+  font-size: 1.7rem;
+}
+
+.download-robots {
+  background-color: #0047ab;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: white;
+  height:5rem;
+  width:8rem;
+  border: 0;
+  grid-column: 2 / 2;
+  grid-row: 7/ 7;
+}
+
+/* footer section */
+footer {
+  height: 20rem;
+  background-color: black;
+}
+
+.foot-nav .foot-ul {
+  background-color: black;
+  color: black;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: 2rem;
+  border: none;
+}
+
+.foot-ul {
+  margin:0;
+  padding: 0;
+}
+
+.foot-li{
+  border-right: .1rem solid white;
+  height:1.2rem;
+  margin-left: 1rem;
+  margin-top:2rem;
+  padding-bottom: 1.5rem;
+}
+
+.contact{
+  border-right: none;
+}
+
+.foot-a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+
+.social {
+  margin-top:2rem;
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  border: none;
+}
+
+.social-img {
+  height:2rem;
+  margin-left: 1rem;
+}
+
+.foot-copy {
+  color: white;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
