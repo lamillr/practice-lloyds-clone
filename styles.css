@@ -285,7 +285,7 @@ hr {
   border: 0;
   text-decoration: none;
   text-align: center;
-  padding: 1rem;
+  margin: 0 auto;
 }
 .download {
   background-color: #0047ab;
@@ -335,7 +335,7 @@ hr {
   border: 0;
   text-decoration: none;
   text-align: center;
-  padding: 1rem;
+  margin: 0 auto;
 }
 .download-robots {
   background-color: #0047ab;
